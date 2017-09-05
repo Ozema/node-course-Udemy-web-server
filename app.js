@@ -33,6 +33,11 @@ app.use((req, res, next) => {
 //     });
 // });
 
+app.get("/projects",(req,res)=>{
+    res.render("projects.hbs",{
+        pageTitle:"Projects"
+    });
+});
 app.use(express.static(__dirname + "/public"));
 
 app.listen(port, () => {
